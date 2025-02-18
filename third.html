@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level - 3 | WebQuest - Scavanger Hunt Edition</title>
+    <style>
+        #clueBox {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clue Scavenger Hunt</h1>
+    <p>Click on the title to unlock the clue.</p>
+
+    <div id="clueBox">
+        <p><strong>use atob() to decode the clue</strong></p>
+    </div>
+
+    <script>
+        // A function to encode the clue in Base64
+        function encodeClue(clue) {
+            return btoa(clue); // Base64 encoding
+        }
+
+        // Obfuscated clue stored in Base64
+        const encodedClue = encodeClue("Go to fourth.html");
+
+        // Creating a dynamically added element
+        const footer = document.createElement('footer');
+        document.body.appendChild(footer); // Append to the body
+
+        // Dynamically setting the attribute with the encoded clue
+        footer.setAttribute('data-clue-abc123', encodedClue);
+
+        // Display clue box once user clicks anywhere on the page
+        document.body.addEventListener('click', function() {
+            document.getElementById('clueBox').style.visibility = 'visible';  // Show clue box
+            alert("Find the attribute of footer tag using DOM, and its value holds the clue");
+        });
+    </script>
+</body>
+</html>

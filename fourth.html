@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">git@github.com:Apiksha/WebQuest.git
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Treasure Hunt - Level 17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Level 17</h1>
+    <p>"I am where programs come to life,
+        And data’s stored to end your strife.
+        Look inside, don’t despair,
+        Your next clue is hidden there!"</p>
+
+    <input type="text" id="answer" placeholder="Enter the hidden clue">
+    <button onclick="checkClue()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        localStorage.setItem("level17Clue", "storage-master");
+        // Ensure clue is stored in Local Storage
+        if (!localStorage.getItem("level17Clue")) {
+            localStorage.setItem("level17Clue", "storage-master");  // Store clue
+        }
+
+        function checkClue() {
+            const userInput = document.getElementById('answer').value.trim().toLowerCase();
+            const storedClue = localStorage.getItem("level17Clue");
+
+            if (userInput === storedClue) {
+                document.getElementById('message').innerText = "Correct! Proceed to fifth.html";
+                setTimeout(() => {
+                    window.location.href = "fifth.html";  // Redirect to next level
+                }, 2000);
+            } else {
+                document.getElementById('message').innerText = "Incorrect! Keep searching.";
+            }
+        }
+    </script>
+</body>
+</html>

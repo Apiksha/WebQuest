@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="scavenger hunt, website development. This event combines the two" lmthoyd="23">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Level - 1 | WebQuest - Scavanger Hunt Edition</title>
+    <link rel="stylesheet" href="./styles/first.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Level 1</h1>
+        <p>Find the hidden clue in the page styling to advance to the next level!</p>
+    </div>
+    <div id="clue"></div>
+    
+    <input type="text" id="answer" placeholder="Enter the clue........">
+    <button onclick="checkAnswer()">Submit</button>
+    
+    
+    <script>
+        async function checkAnswer() {
+            const userInput = document.getElementById('answer').value;
+        
+            const response = await fetch('http://localhost:3000/check-answer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ answer: userInput })
+            });
+        
+            const result = await response.json();
+        
+            if (result.correct) {
+                alert("Correct Answer! Did you know that second is called DYO in Greek?");
+                window.location.href = result.nextPage;
+            } else {
+                alert(result.message);
+            }
+        }
+        </script>
+</body>
+</html>

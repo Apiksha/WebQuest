@@ -1,0 +1,82 @@
+html {
+    --s: 80px;
+    
+    --_g: radial-gradient(#F4EAD5 31%,#0000 32%);
+    --_l: radial-gradient(#594F4F 15%,#0000 16%);
+    background: var(--_l),var(--_l),var(--_g),var(--_g),#45ADA8;
+    background-position: 0 0,var(--s) var(--s);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+    animation: 
+      x 2s cubic-bezier(0.5,92,0.5,-92) infinite, 
+      y 2s cubic-bezier(0.5,92,0.5,-92) infinite -.5s;
+  }
+  
+  @keyframes x {
+    to {
+      background-position-x: -.25px, calc(var(--s) - 1px),-.5px,calc(var(--s) - .5px);
+    }
+  }
+  @keyframes y {
+    to {
+      background-position-y: -.25px, calc(var(--s) - 1px),.25px,calc(var(--s) - .5px);
+    }
+  }
+
+*{
+  font-family: 'Kumbh Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid green;
+    color: rgb(10, 68, 10);
+  }
+  
+.hidden {
+    display: none;
+  }
+  
+  #clue::before {
+    content: "aGVhZA==edoc46esab";
+    color: transparent;
+  }
+  
+  .content{
+    background: #f4f4f9;
+    width: 80vw;
+    height: 37.65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: centers;
+    border-radius: 10px;
+    border: 3px solid green;
+}
+
+input{
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 30vw;
+  margin-top: 2.4rem;
+}
+
+
+button{
+  display: block;
+  padding: 1.5rem 4rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  border: 2px solid  rgb(10, 68, 10);
+}
