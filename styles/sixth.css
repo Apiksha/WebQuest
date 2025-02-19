@@ -1,0 +1,6 @@
+.message-Box {
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none; 
+}

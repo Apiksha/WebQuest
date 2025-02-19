@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scavenger Hunt - Level 5</title>
+    <script>
+        function checkClue() {
+            let userInput = document.getElementById("clueInput").value.trim().toLowerCase();
+            let correctClue = "treasure";
+            let messageBox = document.getElementById("message");
+
+            if (userInput === correctClue) {
+                messageBox.style.color = "green";
+                messageBox.textContent = "Correct! Moving to the next level...";
+                setTimeout(() => {
+                    window.location.href = "sixth.html"; 
+                }, 2000);
+            } else {
+                messageBox.style.color = "red";
+                messageBox.textContent = "Wrong clue! Try again.";
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <h1>Welcome to Level 5</h1>
+    <p>The first clue is hidden somewhere on this page. Can you find it?</p>
+
+    <input type="text" id="clueInput" placeholder="Enter the clue">
+    <button onclick="checkClue()">Submit</button>
+    <p id="message"></p>
 </body>
 </html>
+
+
