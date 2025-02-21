@@ -1,0 +1,5 @@
+.hidden-clue::before {
+    content: "Next clue: find the console log!";
+    color: white;
+    font-size: 0px;
+}
