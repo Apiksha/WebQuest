@@ -1,1 +1,0 @@
-console.log("Hurray! Go to eighth.html for the next level")
