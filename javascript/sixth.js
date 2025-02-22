@@ -26,5 +26,4 @@ function revealClue() {
         }
     }, 500); 
 }
-
 document.addEventListener("DOMContentLoaded", revealClue);
