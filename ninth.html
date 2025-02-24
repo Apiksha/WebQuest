@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scavenger Hunt - Hidden Path</title>
+    <title>Web Development Labyrinth Maze</title>
     <link rel="stylesheet" href="./styles/ninth.css">
 </head>
 <body>
-
-    <h1>Find the Hidden Path</h1>
-    <p>Some doors are real, some are illusions. Choose wisely.</p>
-
-    <div class="grid">
-        <div id="box1" class="clickable"></div>
-        <div id="box2" class="clickable"></div>
-        <div id="box3" class="clickable"></div>
-        <div id="box4" class="clickable"></div>
-        <div id="box5" class="clickable"></div>
-        <div id="box6" class="clickable"></div>
-        <div id="box7" class="clickable"></div>
-        <div id="box8" class="clickable"></div>
-        <div id="box9" class="clickable"></div>
+    <div class="container">
+        <h1>Web Development Labyrinth Maze</h1>
+        <p>Answer questions correctly to move through the maze! Hit a wall or answer incorrectly, and you'll restart.</p>
+        <div id="maze"></div>
+        <div id="quiz-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+                <p id="feedback"></p>
+            </div>
+        </div>
+        <p id="status"></p>
     </div>
-
-    <p id="message"></p>
-
-    <button id="nextBtn" disabled>Proceed to Next Level </a></button>
-    <button id="restartBtn">Restart</button>
     <script src="./javascript/ninth.js"></script>
-
 </body>
 </html>

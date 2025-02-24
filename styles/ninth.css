@@ -1,47 +1,100 @@
+/* styles/twelth.css */
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
     background-color: #f4f4f4;
 }
 
-.grid {
+.container {
+    text-align: center;
+    width: 100%; /* Ensure container takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within the container */
+}
+
+#maze {
     display: grid;
-    grid-template-columns: repeat(3, 80px);
-    gap: 10px;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    margin: 20px auto; /* Auto margins for centering */
+    border: 1px solid #ccc;
+    width: 300px; /* Set a fixed width to prevent extra space */
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
 }
 
-.clickable {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    border-radius: 10px;
+.wall {
+    background-color: #333;
+}
+
+.player {
+    background-color: lightgreen;
+}
+
+.end {
+    background-color: lightblue;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; /* Limit modal width */
+}
+
+#options button {
+    margin: 5px;
+    padding: 8px 15px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.clickable:hover {
-    background-color: #aaa;
-}
-
-#message {
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-#nextBtn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: gray;
-    border: none;
+    background-color: #007bff;
     color: white;
-    cursor: not-allowed;
+    border: none;
     border-radius: 5px;
 }
 
-#nextBtn.active {
-    background-color: green;
-    cursor: pointer;
+#options button:hover {
+    background-color: #0056b3;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #008000; /* Green color for success message */
 }

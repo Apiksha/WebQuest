@@ -1,0 +1,94 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.maze {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: white;
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#car {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+#finish {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+
+.wall {
+    position: absolute;
+    background-color: red;
+    width: 60px;
+    height: 60px;
+}
+
+.hidden-wall {
+    display: block; /* Must be changed to 'none' in DevTools */
+}
+
+#wall1 { top: 50px; left: 100px; }
+#wall2 { top: 150px; left: 50px; }
+#wall3 { top: 200px; left: 200px; }
+
+.clue {
+    position: absolute;
+    font-size: 0px; /* Initially hidden */
+    color: white;
+    top: 120px;
+    left: 120px;
+}
+
+#hiddenInput {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    opacity: 0; /* Must be changed to '1' in DevTools */
+    padding: 5px;
+    font-size: 16px;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#nextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    border: none;
+    color: white;
+    cursor: not-allowed;
+    border-radius: 5px;
+}
+
+#nextBtn.active {
+    background-color: green;
+    cursor: pointer;
+}
+
+#restartBtn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}

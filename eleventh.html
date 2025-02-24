@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scavenger Hunt - Developer's Maze</title>
+    <link rel="stylesheet" href="./styles/eleventh.css">
+</head>
+<body>
+
+    <h1> The Developer's Maze</h1>
+    <p>Use arrow keys to move the car. Solve the puzzles to unlock the path!</p>
+
+    <div class="maze">
+        <div id="car">🚗</div>
+        <div class="wall" id="wall1"></div>
+        <div class="wall hidden-wall" id="wall2"></div>
+        <div class="wall" id="wall3"></div>
+        <div class="clue" id="encodedClue">Q2hhbmdlIG15IGNvbG9yIHRvIHJlZCB0byBzZWUgdGhlIGNsdWU=</div>
+        <input type="text" id="hiddenInput" placeholder="Enter the code">
+        
+        <div id="finish">🏁</div>
+    </div>
+
+    <p id="message"></p>
+    <button id="nextBtn" disabled>Proceed to Next Level</button>
+    <button id="restartBtn">Restart</button>
+
+    <script src="./javascript/eleventh.js"></script>
+
+</body>
+</html>
