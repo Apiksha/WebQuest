@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This is the official website of event \"WebQuest\" from department of Computer Science and Engineering, to be held under Ekatva 2k25 fest, Shri Mata Vaishno Devi University.",
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
