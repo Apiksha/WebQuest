@@ -12,7 +12,7 @@ html, body {
       text-align: center;
       background-color: #1a1a2e;
       color: white;
-      padding: 50px;
+    
   }
   
   @keyframes gradient {
@@ -36,7 +36,7 @@ html, body {
       padding: 20px;
       margin-left:20px;
       margin-right: 20px;
-      margin-top: 50px;
+      margin-top: 100px;
   }
 
   h1 {
@@ -79,7 +79,7 @@ html, body {
       font-size: 1.5em;
       padding: 12px 24px;
       margin-top: 15px;
-      background: linear-gradient(45deg, #54da3f, #5ba9f1);
+      background: linear-gradient(45deg, #d64d9f, #6357d1);
       color: white;
       border: none;
       border-radius: 8px;
@@ -91,7 +91,7 @@ html, body {
 
   button:hover {
       transform: scale(1.1);
-      background: linear-gradient(45deg, #5ba9f1, #9b5de5);
+      background: linear-gradient(45deg, #6357d1, #d64d9f);
   }
 
   #message {
