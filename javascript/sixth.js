@@ -7,7 +7,7 @@ function checkClue() {
         messageBox.style.color = "green";
         messageBox.textContent = "Correct! Moving to the next level...";
         setTimeout(() => {
-            window.location.href = "seventh.html"; 
+            window.location.href = "ghostlyTrail.html"; 
         }, 2000);
     } else {
         messageBox.style.color = "red";

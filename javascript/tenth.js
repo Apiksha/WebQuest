@@ -19,13 +19,13 @@ toggleDarkModeBtn.addEventListener("click", () => {
     clueDiv.textContent = "Find the answer in the console...";
 
     // Reveal the console question
-    console.log("%cAnswer this question: What command lists all properties of an console object?", "color: yellow; font-size: 14px;");
+    console.log("%cAnswer this question: Which console command is used to display an error message?", "color: yellow; font-size: 14px;");
     console.log("%cType your answer as a function call: submitAnswer('yourAnswer')", "color: lightgreen; font-size: 14px;");
 });
 
 // Step 3: Player must answer correctly in the console
 window.submitAnswer = function(answer) {
-    if (answer.toLowerCase() === "console.dir(object)") {
+    if (answer.toLowerCase() === "console.err()") {
         console.log("%cCorrect! The secret word is: 'shadow'.", "color: green; font-size: 14px;");
         
         // Step 4: Show input field on the page

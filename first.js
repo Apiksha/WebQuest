@@ -41,7 +41,7 @@ let accessGranted = false;
 app.post('/check-answer', (req, res) => {
     const { answer } = req.body;
     if (answer.trim().toLowerCase() === "dyohtml") {
-        res.json({ correct: true, nextPage: "second.html" });
+        res.json({ correct: true, nextPage: "Invisible-courier88.html" });
     } else {
         res.json({ correct: false, message: "Incorrect! Keep searching." });
     }
@@ -63,7 +63,7 @@ app.post('/check-answer2', (req, res) => {
 // ✅ Serve the hidden clue ONLY if Level 1 was passed
 app.get('/hidden-clue', (req, res) => {
     if (accessGranted) {
-        res.json({ message: "Great job! The next step is at third.html</a>" });
+        res.json({ message: "Great job! The next step is at Attribute-anomaly5.html</a>" });
         accessGranted = false; // Reset access after serving clue
     } else {
         res.status(403).json({ error: "You haven't solved the riddle yet!" });
