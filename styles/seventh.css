@@ -24,14 +24,16 @@ body{
 
 .content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10; /* Ensure it is above background */
-    color: white; /* Ensure visibility */
+    z-index: 10; 
+    color: white;
     font-size: 1.5rem;
     text-align: center;
-    width: 80%; /* Keeps text readable */
+    width: 80%;
+    line-height: 1.9;
+    font-weight: 600;
 }
 
 .content h1{

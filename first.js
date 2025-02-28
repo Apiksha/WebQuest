@@ -35,7 +35,6 @@ wss.on('connection', (ws) => {
 })
 
 // ✅ Game Logic Routes
-const correctAnswer = "network";
 let accessGranted = false;
 
 // ✅ Check Level 1 answer
@@ -49,6 +48,7 @@ app.post('/check-answer', (req, res) => {
 });
 
 // ✅ Check Level 2 answer
+const correctAnswer = "network";
 app.post('/check-answer2', (req, res) => {
     const userAnswer = req.body.answer.trim().toLowerCase();
     if (userAnswer === correctAnswer) {
@@ -63,7 +63,7 @@ app.post('/check-answer2', (req, res) => {
 // ✅ Serve the hidden clue ONLY if Level 1 was passed
 app.get('/hidden-clue', (req, res) => {
     if (accessGranted) {
-        res.json({ message: "Great job! The next step is at <a href='third.html'>third.html</a>" });
+        res.json({ message: "Great job! The next step is at third.html</a>" });
         accessGranted = false; // Reset access after serving clue
     } else {
         res.status(403).json({ error: "You haven't solved the riddle yet!" });
@@ -83,6 +83,13 @@ app.post('/check-sequence', (req, res) => {
     } else {
         res.json({ success: false, message: "❌ Incorrect! Try again." });
     }
+});
+
+const secretSequence = "dom";
+
+// API endpoint to provide the secret sequence
+app.get("/get-sequence", (req, res) => {
+    res.json({ sequence: secretSequence });
 });
 
 

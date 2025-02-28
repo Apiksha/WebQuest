@@ -2,6 +2,22 @@ body {
     font-family: sans-serif;
     text-align: center;
     padding: 50px;
+    background: linear-gradient(to right, rgb(230, 105, 22),rgb(252, 168, 13));
+}
+
+h1{
+    color: rgb(7, 65, 7);
+    font-size: 4rem;
+}
+
+p{
+    font-size: 1.7rem;
+}
+
+input, button{
+    padding: 1.3rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
 }
 
 #result {
@@ -17,6 +33,6 @@ body {
 }
 
 .hidden-clue {
-    display: none; /* Players need to inspect the page to find this */
+    display: none;
     color: red;
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/third.css">
     <title>Level - 3 | WebQuest - Scavanger Hunt Edition</title>
     <style>
         #clueBox {
@@ -11,9 +12,21 @@
     </style>
 </head>
 <body>
-    <h1>Clue Scavenger Hunt</h1>
-    <p>Click on the title to unlock the clue.</p>
-    <p><strong>use atob() to decode the clue</strong></p>
+
+    <!-- Ripple Background -->
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+
+    <div class="content">
+        <h1>Clue - Level 3</h1>
+        <p>Click on the title to unlock the clue.</p>
+        <p><strong>Hint : Use atob() to decode the clue</strong></p>
+    </div>
 
     <script>
         // A function to encode the clue in Base64

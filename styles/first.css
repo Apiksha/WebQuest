@@ -36,7 +36,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 4px solid green;
     color: rgb(10, 68, 10);
   }
   
@@ -62,6 +61,12 @@ body {
     border: 3px solid green;
 }
 
+.content p{
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 530;
+}
+
 input{
   padding: 2rem 4rem;
   font-size: 2rem;
@@ -73,7 +78,7 @@ input{
 
 button{
   display: block;
-  padding: 1.5rem 4rem;
+  padding: 1.2rem 3.5rem;
   font-size: 2rem;
   margin-top: 3rem;
   border-radius: 10px;
