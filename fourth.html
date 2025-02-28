@@ -20,15 +20,15 @@
     <p id="message"></p>
     </div>
     <script>
-        localStorage.setItem("level17Clue", "application");
+        localStorage.setItem("level4Clue", "fifth");
         // Ensure clue is stored in Local Storage
-        if (!localStorage.getItem("level17Clue")) {
-            localStorage.setItem("level17Clue", "application");  // Store clue
+        if (!localStorage.getItem("level4Clue")) {
+            localStorage.setItem("level4Clue", "fifth");  // Store clue
         }
 
         function checkClue() {
             const userInput = document.getElementById('answer').value.trim().toLowerCase();
-            const storedClue = localStorage.getItem("level17Clue");
+            const storedClue = localStorage.getItem("level4Clue");
 
             if (userInput === storedClue) {
                 document.getElementById('message').innerText = "Correct! Proceed to fifth.html";

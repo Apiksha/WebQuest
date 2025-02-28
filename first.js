@@ -79,7 +79,7 @@ app.post('/check-sequence', (req, res) => {
     const userSequence = req.body.sequence.toLowerCase().replace(/\s/g, '');
 
     if (userSequence === correctSequence) {
-        res.json({ success: true, message: "🎉 Congratulations! You've completed the Web Treasure Hunt!" });
+        res.json({ success: true, message: "🎉 Congratulations! You've completed the Web Treasure Hunt! Quickly fill the form to secure your rank : https://forms.gle/R2s7nmtfrXscXmaE6" });
     } else {
         res.json({ success: false, message: "❌ Incorrect! Try again." });
     }
