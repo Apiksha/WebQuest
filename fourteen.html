@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 14 - WebSockets Mystery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #clue {
+            display: none;
+            font-size: 20px;
+            color: cyan;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Something is happening... but where? 🤔</h1>
+    <p>Check the Network tab for secret messages.</p>
+
+    <p id="clue"></p>
+
+    <script>
+        console.log("🔍 HINT: Open DevTools (`F12`), go to the Network tab, and check WebSockets!");
+
+        let ws = new WebSocket("ws://localhost:3000");
+
+        ws.onmessage = function(event) {
+            // console.log("📡 Incoming WebSocket Message:", event.data);
+
+            try {
+                let data = JSON.parse(event.data);
+                if (data.type === "clue") {
+                    // document.getElementById("clue").innerText = data.message;
+                    // document.getElementById("clue").style.display = "block";
+                    // console.log("🎉 Clue Revealed:", data.message);
+                }
+            } catch (error) {
+                console.warn("⚠️ Received non-JSON WebSocket message:", event.data);
+            }
+        };
+
+        ws.onerror = function(error) {
+            console.error("❌ WebSocket error:", error);
+        };
+
+        ws.onclose = function() {
+            console.warn("⚠️ WebSocket connection closed.");
+        };
+    </script>
+</body>
+</html>

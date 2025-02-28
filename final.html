@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Level - Enter the Secret Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Final Challenge: The First Letters</h1>
+    <p>Type the first letter of each level's filename in order.</p>
+
+    <input type="text" id="answer" placeholder="Enter the sequence">
+    <button onclick="checkSequence()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        async function checkSequence() {
+            let userSequence = document.getElementById("answer").value.trim().toLowerCase().replace(/\s/g, '');
+
+            const response = await fetch('http://localhost:3000/check-sequence', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ sequence: userSequence })
+            });
+
+            const result = await response.json();
+            document.getElementById("message").innerHTML = result.message;
+        }
+    </script>
+</body>
+</html>
