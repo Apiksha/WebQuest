@@ -194,17 +194,26 @@ function drawMaze() {
         for (let x = 0; x < mazeWidth; x++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
+
             if (mazeGrid[y][x] === 'wall') {
                 cell.classList.add('wall');
             } else if (x === playerX && y === playerY) {
                 cell.classList.add('player');
+            } else if (x === 0 && y === 0) { 
+                // Start position
+                cell.classList.add('start');
+                cell.textContent = "Start";
             } else if (x === mazeWidth - 1 && y === mazeHeight - 1) {
+                // End position
                 cell.classList.add('end');
+                cell.textContent = "End";
             }
+
             maze.appendChild(cell);
         }
     }
 }
+
 
 function showQuizModal(moveCallback) {
     questionElement.textContent = questions[currentQuestionIndex].question;

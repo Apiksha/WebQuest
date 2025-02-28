@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">git@github.com:Apiksha/WebQuest.git
+<!-- <html lang="en">git@github.com:Apiksha/WebQuest.git -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Treasure Hunt - Level 17</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/fourth.css">
 </head>
 <body>
+    <div class="text-box">
     <h1>Welcome to Level 17</h1>
     <p>"I am where programs come to life,
         And data’s stored to end your strife.
@@ -23,7 +18,7 @@
     <button onclick="checkClue()">Submit</button>
 
     <p id="message"></p>
-
+    </div>
     <script>
         localStorage.setItem("level17Clue", "application");
         // Ensure clue is stored in Local Storage

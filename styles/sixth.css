@@ -4,3 +4,75 @@
     font-weight: bold;
     user-select: none; 
 }
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
+ 
+.text-box {
+        background: rgba(255, 255, 255, 0.674);
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        border: 2px solid black;
+        text-align: center; /* Ensures text is centered inside */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full viewport height */
+    margin: 0;
+    background-color: #1a1a2e; /* Keeps dark background */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #096160;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+p {
+    font-size: 1.2em;
+    color: #0d0202;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid #9b5de5;
+    border-radius: 5px;
+    outline: none;
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 12px 24px;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #199c98, #6cc915);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    display: block; 
+    margin: 10px auto; 
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #6cc915, #199c98);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffcc00;
+}
