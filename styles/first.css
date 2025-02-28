@@ -45,7 +45,8 @@ body {
   }
   
   #clue::before {
-    content: "aGVhZA==edoc46esab";
+    content: "Z28gdG8gaGVhZA==edoc46esab";
+    content: "Use atob('clue_name') in console to decode the clue. Beware of unrequired characters!";
     color: transparent;
   }
   
