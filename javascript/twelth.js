@@ -38,7 +38,7 @@ function checkFinalAnswer() {
     let finalInput = document.getElementById("final-answer").value.trim();
     if (finalInput.toLowerCase() === "nextlevel") {
         alert("Congratulations! You have unlocked Level 13.");
-        window.location.href = "thirteen.html";
+        window.location.href = "sequence.html";
     } else {
         alert("Incorrect! Keep searching the styles.");
     }

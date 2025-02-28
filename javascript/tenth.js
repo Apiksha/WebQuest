@@ -54,5 +54,5 @@ restartBtn.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", () => {
-    window.location.href = "eleventh.html";
+    window.location.href = "logic.html";
 });
