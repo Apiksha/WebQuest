@@ -285,7 +285,7 @@ document.addEventListener('keydown', (event) => {
             if (playerX === mazeWidth - 1 && playerY === mazeHeight - 1) {
                 statusElement.textContent = "Congratulations! Moving to next level.";
                 setTimeout(() => {
-                  window.location.href = "tenth.html";
+                  window.location.href = "toggle.html";
                 }, 2000); 
             }
         });
