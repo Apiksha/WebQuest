@@ -28,7 +28,7 @@ wss.on('connection', (ws) => {
     setTimeout(() => {
         const clueMessage = JSON.stringify({
             type: "clue",
-            message: "🎉 Secret Clue: Go to final.html 🎉"
+            message: "🎉 Secret Clue: Go to theFinalHunt.html 🎉"
         });
         ws.send(clueMessage);
     }, 100);
@@ -89,7 +89,10 @@ const secretSequence = "dom";
 
 // API endpoint to provide the secret sequence
 app.get("/get-sequence", (req, res) => {
-    res.json({ sequence: secretSequence });
+    res.json({ 
+        sequence: secretSequence, 
+        message: "Great move! Proceed to websocketmystry.html"
+    });
 });
 
 
