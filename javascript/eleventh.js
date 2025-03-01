@@ -10,7 +10,7 @@ window.consoleChallenge = function(answer) {
         document.getElementById("checkButton").addEventListener("click", function() {
             let riddleAnswer = document.getElementById("answerInput").value.trim();
         
-            if (riddleAnswer === "0") { 
+            if (riddleAnswer === "1") { 
                 console.log("%cWell done! Redirecting you to the next challenge...", "color: purple; font-size: 14px;");
                 document.getElementById("result").innerHTML = "<p style='color: green;'>Correct! Redirecting...</p>";
                 setTimeout(() => {
