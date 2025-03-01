@@ -72,7 +72,7 @@ app.get('/hidden-clue', (req, res) => {
 
 
 // ✅ Correct Sequence (Adjust if filenames change)
-const correctSequence = "fs";
+const correctSequence = "ciamfigimtlhst";
 
 // ✅ Route to Check the Sequence (Final Challenge)
 app.post('/check-sequence', (req, res) => {
@@ -91,7 +91,7 @@ const secretSequence = "dom";
 app.get("/get-sequence", (req, res) => {
     res.json({ 
         sequence: secretSequence, 
-        message: "Great move! Proceed to websocketmystry.html"
+        message: "Great move! Proceed to theFinalHunt.html"
     });
 });
 
