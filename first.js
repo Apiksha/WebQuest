@@ -6,7 +6,7 @@ const WebSocket = require('ws');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors()); 
 app.use(bodyParser.json());
@@ -97,6 +97,6 @@ app.get("/get-sequence", (req, res) => {
 
 
 // ✅ Start the server (Use `server.listen`, NOT `app.listen`)
-server.listen(PORT, '0.0.0.0',() => {
-    console.log(`🚀 Server running on ${PORT}`);
+server.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
