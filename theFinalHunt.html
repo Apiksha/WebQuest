@@ -19,7 +19,7 @@
         async function checkSequence() {
             let userSequence = document.getElementById("answer").value.trim().toLowerCase().replace(/\s/g, '');
 
-            const response = await fetch('http://localhost:3000/check-sequence', {
+            const response = await fetch('https://webquest-6amo.onrender.com/check-sequence', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ sequence: userSequence })

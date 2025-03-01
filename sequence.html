@@ -63,12 +63,12 @@
         let progress = 0;
         let messageText = "";
 
-        // Fetch the correct sequence from the server
-        fetch('http://localhost:3000/get-sequence')
+        
+        fetch('https://webquest-6amo.onrender.com/get-sequence')
             .then(response => response.json())
             .then(data => {
-                correctSequence = data.sequence.toLowerCase(); // Ensure lowercase
-                messageText = data.message; // Store message from server
+                correctSequence = data.sequence.toLowerCase();
+                messageText = data.message;
                 console.log("Correct Sequence:", correctSequence);
             })
             .catch(error => {
@@ -78,7 +78,7 @@
         document.addEventListener("keydown", (event) => {
             if (!correctSequence) return; 
 
-            let typedLetter = event.key.toLowerCase(); // Convert input to lowercase
+            let typedLetter = event.key.toLowerCase();
             let nextExpectedLetter = correctSequence[sequence.length];
 
             if (typedLetter === nextExpectedLetter) {
@@ -86,13 +86,13 @@
                 progress = (sequence.length / correctSequence.length) * 100;
                 document.getElementById("progress-bar").style.width = progress + "%";
 
-                if (sequence === correctSequence) { // If full sequence is matched
+                if (sequence === correctSequence) { 
                     document.getElementById("message").innerText = messageText;
                     document.getElementById("message").style.display = "block";
                     console.log("Unlocked!");
                 }
             } else {
-                // Wrong letter entered → reset progress
+                
                 sequence = "";
                 progress = 0;
                 document.getElementById("progress-bar").style.width = "0%";
