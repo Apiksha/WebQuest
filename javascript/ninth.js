@@ -13,6 +13,7 @@ let playerX = 0;
 let playerY = 0;
 let currentQuestionIndex = 0;
 let mazeGrid = [];
+let firstMoveMade = false;
 
 const questions = [
     {
@@ -295,6 +296,6 @@ document.addEventListener('keydown', (event) => {
 // Initialization
 generateMaze();
 drawMaze();
-showQuizModal(() => {
-    drawMaze();
-});
+// showQuizModal(() => {
+//     drawMaze();
+// });
