@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <!-- Ripple Background -->
+    
     <div class="ripple-background">
         <div class="circle xxlarge shade1"></div>
         <div class="circle xlarge shade2"></div>
@@ -28,23 +28,25 @@
         <p><strong>Hint : Use atob() to decode the clue</strong></p>
     </div>
 
+    <a href="https://forms.gle/izbFkeCdaLGh8fzD9" style="margin: 3rem; font-size: 1.6rem;">Click here quickly to confirm your status!</a>
+
+
     <script>
-        // A function to encode the clue in Base64
+     
         function encodeClue(clue) {
-            return btoa(clue); // Base64 encoding
+            return btoa(clue);
         }
 
-        // Obfuscated clue stored in Base64
+       
         const encodedClue = encodeClue("Go to memory-maze23.html");
 
-        // Creating a dynamically added element
+     
         const footer = document.createElement('footer');
-        document.body.appendChild(footer); // Append to the body
+        document.body.appendChild(footer);
 
-        // Dynamically setting the attribute with the encoded clue
+   
         footer.setAttribute('clue-attribute', encodedClue);
 
-        // Display clue box once user clicks anywhere on the page
         document.body.addEventListener('click', function() {
             alert("Find the attribute of footer tag using DOM in console, and its value holds the clue");
         });

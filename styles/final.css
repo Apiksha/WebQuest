@@ -27,6 +27,7 @@ button {
     color: black;
     border: none;
     cursor: pointer;
+    margin-bottom: 3rem;
 }
 
 #message {
